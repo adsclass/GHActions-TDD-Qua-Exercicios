@@ -33,13 +33,17 @@ if(isNaN(n) || typeof n !=='number') {
   }
 
   let a = 0, b = 1;
+  console.log(`Iniciando o cálculo para n = ${n}`);
   for (let i = 2; i <= n; i++) {
+    console.log(`Iteração ${i}: a = ${a}, b = ${b}`);
     const temp = a + b;
     a = b;
     b = temp;
   }
+  console.log(`Resultado final: ${b}`);
   return b;
 }
+
 
 function ehPrimo(n) {
   if(typeof n === 'string'){
