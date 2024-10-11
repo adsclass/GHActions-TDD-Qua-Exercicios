@@ -7,7 +7,6 @@ describe('função fatorial', () => {
     expect(() => fatorial("10")).not.toThrow(TypeError);
     expect(() => fatorial(10)).not.toThrow(TypeError);
 
-    // Garantir que não existe fatorial de número negativo
     expect(() => fatorial(-5)).toThrow(Error);
     expect(() => fatorial(-5)).toThrow("Não existe fatorial de número negativo");
   });
@@ -28,7 +27,6 @@ describe('função fibonacci', () => {
     expect(() => fibonacci("10")).not.toThrow(TypeError);
     expect(() => fibonacci(10)).not.toThrow(TypeError);
 
-    // Garantir que não existe fibonacci de número menor ou igual a zero
     expect(() => fibonacci(-10)).toThrow(Error);
     expect(() => fibonacci(-10)).toThrow("Não existe fibonacci de número menor ou igual a zero");
     expect(() => fibonacci(0)).toThrow(Error);
@@ -51,7 +49,6 @@ describe('função ehPrimo', () => {
     expect(() => ehPrimo("10")).not.toThrow(TypeError);
     expect(() => ehPrimo(10)).not.toThrow(TypeError);
 
-    // Garantir que não existe número primo de número menor ou igual a 1
     expect(() => ehPrimo(1)).toThrow(Error);
     expect(() => ehPrimo(1)).toThrow("Não existe número primo de número menor ou igual a 1");
     expect(() => ehPrimo(0)).toThrow(Error);
