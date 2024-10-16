@@ -10,8 +10,8 @@ describe('função fatorial', () => {
     // Garantir que o argumento é um número
     expect(() => fatorial("Texto")).toThrow(TypeError);
     expect(() => fatorial("Texto")).toThrow("O argumento deve ser um número válido");
-    expect(() => fatorial("10")).not.toThrow(TypeError);
-    expect(() => fatorial(10)).not.toThrow(TypeError);
+    expect(() => fatorial("10")).toThrow(TypeError);
+    expect(() => fatorial(10)).not.toThrow();
 
     // Garantir que não existe fatorial de número negativo
     expect(() => fatorial(-10)).toThrow(Error);
@@ -36,8 +36,8 @@ describe('função fibonacci', () => {
     // Garantir que o argumento é um número
     expect(() => fibonnacci("Texto")).toThrow(TypeError);
     expect(() => fibonnacci("Texto")).toThrow("O argumento deve ser um número válido");
-    expect(() => fibonnacci("10")).not.toThrow(TypeError);
-    expect(() => fibonnacci(10)).not.toThrow(TypeError);
+    expect(() => fibonnacci("10")).toThrow(TypeError);
+    expect(() => fibonnacci(10)).not.toThrow();
 
     // Garantir que não existe fibonnacci de número menor ou igual a zero
     expect(() => fibonnacci(-10)).toThrow(Error);
@@ -46,11 +46,11 @@ describe('função fibonacci', () => {
     expect(() => fibonnacci(0)).toThrow("Não existe fibonnacci de número menor ou igual a zero");
   });
   test('Retorna o número fibonacci de 8 igual a 21', () => {
-    expect(fibonacci(8)).toBe(21);
+    expect(fibonnacci(8)).toBe(21);
   });
 
   test('Retorna o número fibonacci de 10 igual a 55', () => {
-    expect(fibonacci(10)).toBe(55);
+    expect(fibonnacci(10)).toBe(55);
   });
 });
 
@@ -64,8 +64,8 @@ describe('função ehPrimo', () => {
     // Garantir que o argumento é um número
     expect(() => ehPrimo("Texto")).toThrow(TypeError);
     expect(() => ehPrimo("Texto")).toThrow("O argumento deve ser um número válido");
-    expect(() => ehPrimo("10")).not.toThrow(TypeError);
-    expect(() => ehPrimo(10)).not.toThrow(TypeError);
+    expect(() => ehPrimo("10")).toThrow(TypeError);
+    expect(() => ehPrimo(10)).not.toThrow();
 
     // Garantir que não existe número primo de número menor ou igual a 1
     expect(() => ehPrimo(1)).toThrow(Error);
