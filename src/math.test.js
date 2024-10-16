@@ -6,7 +6,6 @@ describe('função fatorial', () => {
     expect(fatorial).toBeDefined();
     // Verifica se a função 'fatorial' possui 1 argumento
     expect(fatorial.length).toBe(1);
-
     // Garantir que o argumento é um número
     expect(() => fatorial("Texto")).toThrow(TypeError);
     expect(() => fatorial("Texto")).toThrow("O argumento deve ser um número válido");
