@@ -1,3 +1,4 @@
+// GHActions-TDD-Qua-Exercicios/src/math.js
 function fatorial(n) {
   if (typeof n !== 'number') {
     throw new TypeError("O argumento deve ser um número válido");
